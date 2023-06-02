@@ -38,22 +38,6 @@ export const EventsPage = () => {
     console.log(events);
   }, []);
 
-  const handleDeleteEvent = (eventId) => {
-    fetch(`http://localhost:3000/events/${eventId}`, {
-      method: "DELETE",
-    })
-      .then(() => {
-        const updatedEvents = events.filter((event) => event.id !== eventId);
-        setEvents(updatedEvents);
-        setFilteredEvents(updatedEvents);
-        alert("Event deleted successfully!");
-      })
-      .catch((error) => {
-        console.log(error);
-        alert("Failed to delete event!");
-      });
-  };
-
   return (
     <Flex
       mx="auto"
@@ -158,28 +142,10 @@ export const EventsPage = () => {
                 <Text>Created by: {event.createdBy}</Text>
               </Box>
             </Link>
-            <Button
-              onClick={() => handleDeleteEvent(event.id)}
-              borderRadius="15px"
-              border="3px solid"
-              padding="0.6em 1.2em"
-              fontSize="1em"
-              fontWeight="500"
-              fontFamily="inherit"
-              backgroundColor="grey.500"
-              cursor="pointer"
-              transition="border-color 0.25s, box-shadow 0.25s"
-              _hover={{
-                borderColor: "purple",
-                boxShadow: "0 0 8px 2px rgba(128, 78, 254, 0.5)",
-              }}
-              _focus={{ outline: "4px auto -webkit-focus-ring-color" }}
-            >
-              Delete Event
-            </Button>
           </Box>
         ))}
       </Stack>
     </Flex>
   );
 };
+
