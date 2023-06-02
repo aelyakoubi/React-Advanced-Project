@@ -1,19 +1,33 @@
 import { Box, Heading, Input, Stack, Button, Flex } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 export const AddEvent = ({ setFilteredEvents, events }) => {
+  const [photoUrl, setPhotoUrl] = useState("");
+  const [id, setId] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
+    const startTime = new Date(form.startTime.value);
+    const endTime = new Date(form.endTime.value);
+
+    if (endTime <= startTime) {
+      alert("End time must be after start time");
+      form.reset();
+      return;
+    }
+
     const newEvent = {
+      id: id,
       title: form.title.value,
       description: form.description.value,
-      image: form.image.value,
+      image: photoUrl,
       startTime: form.startTime.value,
       endTime: form.endTime.value,
       category: form.category.value,
       createdBy: form.createdBy.value,
     };
+
     fetch("http://localhost:3000/events", {
       method: "POST",
       headers: {
@@ -33,6 +47,14 @@ export const AddEvent = ({ setFilteredEvents, events }) => {
       });
   };
 
+  const handlePhotoUrlChange = (event) => {
+    setPhotoUrl(event.target.value);
+  };
+
+  const handleIdChange = (event) => {
+    setId(event.target.value);
+  };
+
   return (
     <Flex>
       <Box
@@ -49,13 +71,24 @@ export const AddEvent = ({ setFilteredEvents, events }) => {
 
         <form onSubmit={handleSubmit}>
           <Stack spacing={4} mt={50}>
-            <Input name="title" placeholder="Title" />
-            <Input name="description" placeholder="Description" />
-            <Input name="image" placeholder="Image URL" />
-            <Input type="datetime-local" name="startTime" />
-            <Input type="datetime-local" name="endTime" />
-            <Input name="category" placeholder="Category" />
-            <Input name="createdBy" placeholder="Created By" />
+            <Input name="title" placeholder="Title" required />
+            <Input name="description" placeholder="Description" required />
+            <Input
+              name="photoUrl"
+              placeholder="Photo URL"
+              value={photoUrl}
+              onChange={handlePhotoUrlChange}
+              required
+            />
+            <Input type="datetime-local" name="startTime" required />
+            <Input type="datetime-local" name="endTime" required />
+            <Input name="category" placeholder="Category" required />
+            <Input
+              name="createdBy"
+              placeholder="Created By"
+              required
+              onChange={handleIdChange}
+            />
             <Button
               type="submit"
               borderRadius="15px"
