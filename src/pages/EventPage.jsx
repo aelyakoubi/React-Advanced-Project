@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Heading, Input, Flex, Button } from "@chakra-ui/react";
+import { Box, Heading, Input, Flex, Button, Text } from "@chakra-ui/react";
 import { useParams, useNavigate } from "react-router-dom";
 import { DeleteButton } from "../components/DeleteButton";
 
@@ -7,14 +7,23 @@ export const EventPage = () => {
   const { eventId } = useParams();
   const navigate = useNavigate();
   const [event, setEvent] = useState(null);
-  const [editedEvent, setEditedEvent] = useState(null);
+  const [editedEvent, setEditedEvent] = useState({});
+  const [eventUser, setEventUser] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/events/${eventId}`)
+    fetch("http://localhost:3000/events/" + eventId)
       .then((response) => response.json())
       .then((data) => {
         setEvent(data);
-        setEditedEvent(data);
+        setEditedEvent(data); // Populate the editedEvent state with the initial data
+
+        // Fetch user data
+        fetch("http://localhost:3000/users/" + data.createdBy)
+          .then((response) => response.json())
+          .then((userData) => {
+            setEventUser(userData);
+          })
+          .catch((error) => console.log(error));
       })
       .catch((error) => console.log(error));
   }, [eventId]);
@@ -72,7 +81,7 @@ export const EventPage = () => {
   return (
     <Flex
       gap="1"
-      maxW="960px"
+      maxW="350px"
       mx="auto"
       sm="30em"
       md="48em"
@@ -82,17 +91,25 @@ export const EventPage = () => {
       lineHeight="base"
       align={"center"}
     >
-      <Box mt={45}>
+      <Box>
         <Heading as="h1" mb={4}>
           {event.title}
         </Heading>
+        {/* Render user information */}
+        {eventUser && (
+          <Box>
+            <img src={eventUser.image} alt={eventUser.name} />
+            <Text>Created by: {eventUser.name}</Text>
+          </Box>
+        )}
+
         <form>
           <label>
             Description:
             <Input
               type="text"
               name="description"
-              value={editedEvent.description}
+              value={editedEvent.description || ""}
               onChange={handleInputChange}
             />
           </label>
@@ -101,7 +118,7 @@ export const EventPage = () => {
             <Input
               type="text"
               name="startTime"
-              value={editedEvent.startTime}
+              value={editedEvent.startTime || ""}
               onChange={handleInputChange}
             />
           </label>
@@ -110,7 +127,7 @@ export const EventPage = () => {
             <Input
               type="text"
               name="endTime"
-              value={editedEvent.endTime}
+              value={editedEvent.endTime || ""}
               onChange={handleInputChange}
             />
           </label>
@@ -119,7 +136,7 @@ export const EventPage = () => {
             <Input
               type="text"
               name="category"
-              value={editedEvent.category}
+              value={editedEvent.category || ""}
               onChange={handleInputChange}
             />
           </label>
@@ -128,12 +145,12 @@ export const EventPage = () => {
             <Input
               type="text"
               name="createdBy"
-              value={editedEvent.createdBy}
+              value={editedEvent.createdBy || ""}
               onChange={handleInputChange}
             />
           </label>
         </form>
-        s
+
         <Box
           mt={4}
           borderRadius="15px"
