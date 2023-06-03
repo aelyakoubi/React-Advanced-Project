@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Box, Heading, Input, Flex, Button, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Input,
+  Flex,
+  Button,
+  Text,
+  Image,
+} from "@chakra-ui/react";
 import { useParams, useNavigate } from "react-router-dom";
 import { DeleteButton } from "../components/DeleteButton";
 
@@ -94,6 +102,9 @@ export const EventPage = () => {
       <Box>
         <Heading as="h1" mb={4}>
           {event.title}
+          {event.image && (
+            <Image src={event.image} alt={event.title} mb={4} maxH="300px" />
+          )}
         </Heading>
         {/* Render user information */}
         {eventUser && (
