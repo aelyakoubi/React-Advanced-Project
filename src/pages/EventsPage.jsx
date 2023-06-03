@@ -34,8 +34,6 @@ export const EventsPage = () => {
         setFilteredEvents(data); // Initialize filtered events with all events
       })
       .catch((error) => console.log(error));
-
-    console.log(events);
   }, []);
 
   return (
@@ -148,3 +146,4 @@ export const EventsPage = () => {
     </Flex>
   );
 };
+
