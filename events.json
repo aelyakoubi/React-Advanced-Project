@@ -18,12 +18,15 @@
       "title": "Trampoline party",
       "description": "Bounce around with your friends",
       "image": "https://i.pinimg.com/736x/3d/2f/af/3d2faf4e3188d34a9fcdc00df59e77b0.jpg",
-      "categoryIds": [2],
-      "attendedBy": [1],
+      "categoryIds": [
+        2
+      ],
+      "attendedBy": [
+        1
+      ],
       "location": "My back yard",
       "startTime": "2023-03-10T18:00",
-      "endTime": "2023-03-10T17:00:00.000Z",
-      "category": "sports"
+      "endTime": "2023-03-10T17:00:00.000Z"
     },
     {
       "id": 2,
@@ -31,12 +34,15 @@
       "title": "Laser Tag mania",
       "description": "Let's play laser tag!",
       "image": "https://www.ctvnews.ca/polopoly_fs/1.5118552.1600965663!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg",
-      "categoryIds": [2],
-      "attendedBy": [2],
+      "categoryIds": [
+        2
+      ],
+      "attendedBy": [
+        2
+      ],
       "location": "Blinded by the Lights Laser Tag, 15 Main St.",
       "startTime": "2023-04-06T18:46",
-      "endTime": "2023-04-06T17:46",
-      "category": "games"
+      "endTime": "2023-04-06T17:46"
     },
     {
       "id": 3,
@@ -44,12 +50,17 @@
       "title": "Badminton game",
       "description": "Hit that shuttle!",
       "image": "https://s3.eu-west-2.amazonaws.com/ws-activestirling/production/Badminton/_1200x630_crop_center-center_none/Badminton-3.jpg",
-      "categoryIds": [1, 2],
-      "attendedBy": [1, 2],
+      "categoryIds": [
+        1,
+        2
+      ],
+      "attendedBy": [
+        1,
+        2
+      ],
       "location": "The Park",
       "startTime": "2023-03-15T12:00:00.000Z",
-      "endTime": "2023-03-15T13:30:00.000Z",
-      "category": "sports"
+      "endTime": "2023-03-15T13:30:00.000Z"
     },
     {
       "id": 4,
@@ -57,38 +68,125 @@
       "title": "Yoga",
       "description": "It's a bit of a stretch.",
       "image": "https://ymcasouthflorida.org/wp-content/uploads/2019/12/AA2I8910-scaled.jpg",
-      "categoryIds": [1],
+      "categoryIds": [
+        1
+      ],
       "attendedBy": [],
       "location": "Shavasana Yoga School",
       "startTime": "2023-03-09T06:00:00.000Z",
-      "endTime": "2023-03-09T07:00:00.000Z",
-      "category": "sports"
+      "endTime": "2023-03-09T07:00:00.000Z"
     },
     {
-      "id": 5,
       "createdBy": 1,
       "title": "Test",
       "description": "fdfadferererer",
       "image": "https://images.unsplash.com/photo-1614602355999-bc295cba75b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80",
-      "categoryIds": [2],
-      "attendedBy": [1],
+      "categoryIds": [
+        2
+      ],
+      "attendedBy": [
+        1
+      ],
       "location": "15 Main St.",
       "startTime": "2023-04-13T12:10",
       "endTime": "2023-04-06T14:46",
-      "category": "test"
+      "id": 5
     },
     {
-      "id": 6,
       "createdBy": 2,
       "title": "adfadf",
       "description": "asdfads",
       "image": "https://images.unsplash.com/photo-1614602355999-bc295cba75b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80",
-      "categoryIds": [2],
-      "attendedBy": [2],
+      "categoryIds": [
+        2
+      ],
+      "attendedBy": [
+        2
+      ],
       "location": "as",
       "startTime": "2023-04-06T13:51:00.000Z",
       "endTime": "2023-04-06T13:54:00.000Z",
-      "category": "games"
+      "id": 6
+    },
+    {
+      "title": "Game event",
+      "description": "Let's game guys",
+      "image": "https://images.pexels.com/photos/1174746/pexels-photo-1174746.jpeg",
+      "startTime": "2023-07-05T20:30",
+      "endTime": "2023-07-05T22:30",
+      "category": "games",
+      "createdBy": "Pim Deko",
+      "id": 9
+    },
+    {
+      "title": "Golf Event AMS",
+      "description": "Let's hit the ball",
+      "image": "https://www.golf.nl/-/media/images/zelf-golfen/meerenbetergolf.jpg",
+      "startTime": "2023-07-04T15:30",
+      "endTime": "2023-07-04T19:00",
+      "category": "sports",
+      "createdBy": "Niels Jansen",
+      "id": 10
+    },
+    {
+      "title": "Badminton",
+      "description": "Let's Play the game",
+      "image": "https://wtgf.org/wp-content/uploads/2022/06/Untitled-design-14.png",
+      "startTime": "2023-07-03T15:45",
+      "endTime": "2023-07-03T20:45",
+      "category": "sports",
+      "createdBy": "Julian Anders",
+      "id": 11
+    },
+    {
+      "title": "Peter Pan",
+      "description": "Need to watch ",
+      "image": "https://media.s-bol.com/B1vkPO6K77o2/0gKOqON/849x1200.jpg",
+      "startTime": "2023-07-10T17:30",
+      "endTime": "2023-07-10T22:00",
+      "category": "games",
+      "createdBy": "Peter Borokoek",
+      "id": 12
+    },
+    {
+      "title": "Voetbal toernooi",
+      "description": "Let's play soccer",
+      "image": "https://voetbaltoernooien.info/wp-content/uploads/2023/02/AdobeStock_125615546-1024x676.jpeg",
+      "startTime": "2023-07-07T16:14",
+      "endTime": "2023-07-07T20:45",
+      "category": "sports",
+      "createdBy": "Achraf Hakimi",
+      "id": 13
+    },
+    {
+      "title": "Basketbal toernooi",
+      "description": "Let's Play basketbal",
+      "image": "https://afbeelding.dvhn.nl/dvhn/incoming/98tphq-202206052128-1.jpg/alternates/LANDSCAPE_1280/202206052128-1.jpg",
+      "startTime": "2023-07-09T17:40",
+      "endTime": "2023-07-09T20:40",
+      "category": "sports",
+      "createdBy": "Le Bron James ",
+      "id": 14
+    },
+    {
+      "title": "Lasergame Tournament",
+      "description": "Shooter power cup",
+      "image": "https://aloha.nl/wp-content/uploads/2022/01/laser-allemaal-1024x682.jpg",
+      "startTime": "2023-08-07T15:45",
+      "endTime": "2023-08-07T18:45",
+      "category": "games",
+      "createdBy": "Pim van Deksel",
+      "id": 15
+    },
+    {
+      "title": "Playing Chess ",
+      "description": "Who is smarter",
+      "image": "https://images.pexels.com/photos/260024/pexels-photo-260024.jpeg",
+      "startTime": "2023-06-30T20:45",
+      "endTime": "2023-06-30T22:00",
+      "category": "games",
+      "createdBy": "Erwin Verweij",
+      "id": 16
     }
   ],
   "categories": [
