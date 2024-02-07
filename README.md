@@ -6,3 +6,15 @@ Computer language: JavaScript, React, Chakra Ui, Vite
 Set up:
 ```npm install, npm run dev```
 -----------------------------------------------------------------------------------
+# React-Advanced-Project
+
+1e time in your 1e terminal: npm install
+
+2e time or else: npm run dev
+
+To run the virtual server in your 2e terminal use: json-server events.json  
+
+
+**** Please make sure your events.json file is located on your desktop or somewhere else, but not in your "starter" folder....! Otherwise you get an loop ******
+
+Thanks and credits to the Winc Academy in Amsterdam the Netherlands
