@@ -4,7 +4,7 @@ Windows, Visual Studio Code
 Computer language: JavaScript, React, Chakra Ui, Vite
 ------------------------------------------------------
 Set up:
-```npm install, npm run dev```
+```npm install, npm run dev, (2e) terminal: json-server events.json  ```
 -----------------------------------------------------------------------------------
 # React-Advanced-Project
 
@@ -22,5 +22,29 @@ To run the virtual server in your 2e terminal use: json-server events.json
 
 ![React2](https://github.com/aelyakoubi/React-Advanced-Project/assets/115151631/486e52e1-849f-4d38-adf7-f0824aa334c5)
 
+Here's how you can do it:
+
+Open PowerShell as Administrator: Right-click on the PowerShell icon and choose "Run as administrator" to ensure you have the necessary permissions to modify the execution policy.
+
+Set Execution Policy: Run the following command to set the execution policy to allow script execution:
+
+powershell
+Copy code:
+```Set-ExecutionPolicy RemoteSigned```
+This command sets the execution policy to RemoteSigned, which allows you to run scripts that you've written yourself without needing them to be digitally signed. You might need to confirm the change by typing "Y" and pressing Enter.
+
+Verify Execution Policy: You can verify that the execution policy has been set correctly by running:
+
+powershell
+Copy code:
+```Get-ExecutionPolicy```
+It should return "RemoteSigned".
+
+Try Running json-server Again: After adjusting the execution policy, try running the json-server command again:
+
+powershell
+Copy code:
+```json-server --version```
+This time, it should execute without encountering the previous error.
 
 Thanks and credits to the Winc Academy in Amsterdam the Netherlands!
