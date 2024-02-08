@@ -22,7 +22,21 @@ To run the virtual server in your 2e terminal use: json-server events.json
 
 ![React2](https://github.com/aelyakoubi/React-Advanced-Project/assets/115151631/486e52e1-849f-4d38-adf7-f0824aa334c5)
 
-Here's how you can do it:
+Having problems to starting up the server:
+
+Install json-server globally using npm: If you haven't installed json-server yet, you can do so globally using npm (Node Package Manager). Open your terminal (PowerShell) and run the following command:
+
+Copy code:
+```npm install -g json-server```
+This command will install json-server globally on your system, making it available as a command-line tool.
+
+Verify Installation: After installation, verify if json-server is correctly installed by running the following command:
+
+css
+Copy code:
+```json-server --version```
+
+Still having problems? Then see under here:
 
 Open PowerShell as Administrator: Right-click on the PowerShell icon and choose "Run as administrator" to ensure you have the necessary permissions to modify the execution policy.
 
