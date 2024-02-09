@@ -63,4 +63,4 @@ This time, it should execute without encountering the previous error.
 
 ![React2](https://github.com/aelyakoubi/React-Advanced-Project/assets/115151631/486e52e1-849f-4d38-adf7-f0824aa334c5)
 
-Thanks and credits to the Winc Academy in Amsterdam the Netherlands!
+```Thanks and credits to WincAcademy in Amsterdam, The Netherlands!```
