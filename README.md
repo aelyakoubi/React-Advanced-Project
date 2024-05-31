@@ -1,7 +1,7 @@
 Made with:
 Windows, Visual Studio Code
 -----------------------------------------------------
-Computer language: JavaScript, React, Chakra Ui, Vite
+Computer language/software/framework:React.js, Javascript, Chakra Ui, JSON, CRUD 'method'.
 ------------------------------------------------------
 Set up:
 ```npm install, npm run dev, (2e) terminal: json-server events.json  ```
